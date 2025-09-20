@@ -5,10 +5,17 @@ terraform {
       version = "~> 6.0"
     }
   }
+  backend "s3" {
+    bucket = "petngobucket"
+    key    = "ec2/terraform.tfstate"
+    region = "us-east-1"
+  }
 }
 
 # Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
 }
+
+
 
