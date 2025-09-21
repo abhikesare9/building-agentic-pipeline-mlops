@@ -22,11 +22,6 @@ variable "security-group" {
   description = "linux security group"
 }
 
-variable "subnet-id" {
-  type        = string
-  default     = "subnet-04f9f48e3d537e407"
-  description = "description"
-}
 
 variable "ami-id" {
   type        = string
@@ -34,6 +29,8 @@ variable "ami-id" {
   description = "description"
 }
 
-
-
-
+variable "vpc_id" {
+  type        = string
+  default     = "vpc-093923e11384d59df"
+  description = "vpc id "
+}
