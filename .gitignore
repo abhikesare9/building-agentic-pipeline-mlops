@@ -2,3 +2,5 @@
 *.tfstate.backup
 */.terraform/
 */.terraform.lock.hcl
+*.pem
+instance_ids.txt
