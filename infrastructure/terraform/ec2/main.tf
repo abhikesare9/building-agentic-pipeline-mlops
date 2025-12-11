@@ -21,7 +21,7 @@ resource "aws_instance" "example" {
    connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("${path.module}/jenkinsserver.pem")
+    private_key = file("${path.module}/training.pem")
     host        = self.public_ip
     timeout     = "5m"
   }

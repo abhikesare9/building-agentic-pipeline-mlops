@@ -1,6 +1,6 @@
 variable "instance-type" {
   type        = string
-  default     = "t3.xlarge"
+  default     = "t3.medium"
   description = "type of my ec2 instance"
 }
 
@@ -12,25 +12,25 @@ variable "storage" {
 
 variable "ssh-key-name" {
   type        = string
-  default     = "jenkinsserver"
+  default     = "training.pem"
   description = "ssh key"
 }
 
 variable "security-group" {
   type        = list(string)
-  default     = ["sg-023eef078a375ad37"]
+  default     = ["sg-045a7bb175542e3f2"]
   description = "linux security group"
 }
 
 
 variable "ami-id" {
   type        = string
-  default     = "ami-08982f1c5bf93d976"
+  default     = "ami-01760eea5c574eb86"
   description = "description"
 }
 
 variable "vpc_id" {
   type        = string
-  default     = "vpc-093923e11384d59df"
+  default     = "vpc-0ce34f78b725c7b66"
   description = "vpc id "
 }
