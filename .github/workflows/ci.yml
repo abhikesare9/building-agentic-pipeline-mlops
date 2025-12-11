@@ -30,18 +30,22 @@ jobs:
 
       # Terraform Init
       - name: Terraform Init
+        working-directory: ./infrastructure/terraform/ec2
         run: terraform init
 
       # Terraform Validate (Optional)
       - name: Terraform Validate
+        working-directory: ./infrastructure/terraform/ec2
         run: terraform validate
 
       # Terraform Plan
       - name: Terraform Plan
+        working-directory: ./infrastructure/terraform/ec2
         run: terraform plan -out=tfplan
 
       # Terraform Apply (auto approve)
         # Remove this step if you don't want auto apply on pushes
       - name: Terraform Apply
+        working-directory: ./infrastructure/terraform/ec2
         if: github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve tfplan
